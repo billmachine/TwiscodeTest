@@ -1,0 +1,932 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05768F4864B750AC460FDA3E /* Pods_TwisCodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721F6C5754DE18D77587C2E1 /* Pods_TwisCodeTest.framework */; };
+		390DCD1E5D3BAEB7A8B037B2 /* Pods_TwisCodeTest_TwisCodeTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31419EC56FBB2C73562684DD /* Pods_TwisCodeTest_TwisCodeTestUITests.framework */; };
+		71F3993AA1BA760E9C25EFFE /* Pods_TwisCodeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E5718BD7B70569E2B5FEE3 /* Pods_TwisCodeTestTests.framework */; };
+		FA263D5D25BC25C2006EB870 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D5C25BC25C2006EB870 /* AppDelegate.swift */; };
+		FA263D5F25BC25C2006EB870 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D5E25BC25C2006EB870 /* SceneDelegate.swift */; };
+		FA263D6125BC25C2006EB870 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D6025BC25C2006EB870 /* ViewController.swift */; };
+		FA263D6425BC25C3006EB870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA263D6225BC25C3006EB870 /* Main.storyboard */; };
+		FA263D6725BC25C3006EB870 /* TwisCodeTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA263D6525BC25C3006EB870 /* TwisCodeTest.xcdatamodeld */; };
+		FA263D6925BC25C6006EB870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA263D6825BC25C6006EB870 /* Assets.xcassets */; };
+		FA263D6C25BC25C6006EB870 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA263D6A25BC25C6006EB870 /* LaunchScreen.storyboard */; };
+		FA263D7725BC25C6006EB870 /* TwisCodeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D7625BC25C6006EB870 /* TwisCodeTestTests.swift */; };
+		FA263D8225BC25C6006EB870 /* TwisCodeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D8125BC25C6006EB870 /* TwisCodeTestUITests.swift */; };
+		FA263D9425BC269E006EB870 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FA263D9325BC269E006EB870 /* Alamofire */; };
+		FA263DA825BC280E006EB870 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9925BC280D006EB870 /* Response.swift */; };
+		FA263DA925BC280E006EB870 /* Default_photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9A25BC280D006EB870 /* Default_photo.swift */; };
+		FA263DAA25BC280E006EB870 /* Get_address.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9B25BC280D006EB870 /* Get_address.swift */; };
+		FA263DAB25BC280E006EB870 /* Item_currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9C25BC280D006EB870 /* Item_currency.swift */; };
+		FA263DAC25BC280E006EB870 /* Deal_option.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9D25BC280D006EB870 /* Deal_option.swift */; };
+		FA263DAD25BC280E006EB870 /* Item_location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9E25BC280D006EB870 /* Item_location.swift */; };
+		FA263DAE25BC280E006EB870 /* Default_icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263D9F25BC280D006EB870 /* Default_icon.swift */; };
+		FA263DAF25BC280E006EB870 /* Condition_of_item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA025BC280D006EB870 /* Condition_of_item.swift */; };
+		FA263DB025BC280E006EB870 /* Get_delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA125BC280D006EB870 /* Get_delivery.swift */; };
+		FA263DB125BC280E006EB870 /* Sub_category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA225BC280E006EB870 /* Sub_category.swift */; };
+		FA263DB225BC280E006EB870 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA325BC280E006EB870 /* User.swift */; };
+		FA263DB325BC280E006EB870 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA425BC280E006EB870 /* Category.swift */; };
+		FA263DB425BC280E006EB870 /* Item_price_type.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA525BC280E006EB870 /* Item_price_type.swift */; };
+		FA263DB525BC280E006EB870 /* Item_type.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA625BC280E006EB870 /* Item_type.swift */; };
+		FA263DB625BC280E006EB870 /* Rating_details.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA263DA725BC280E006EB870 /* Rating_details.swift */; };
+		FA33899B25BC5AE600926294 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33899925BC5AE600926294 /* ProductCollectionViewCell.swift */; };
+		FA33899C25BC5AE600926294 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA33899A25BC5AE600926294 /* ProductCollectionViewCell.xib */; };
+		FA3389EC25BC786700926294 /* BadgeBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3389EB25BC786700926294 /* BadgeBarButton.swift */; };
+		FA3389F525BC8A0500926294 /* LocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3389F425BC8A0500926294 /* LocalSource.swift */; };
+		FA338A0325BC94AC00926294 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A0225BC94AC00926294 /* CartViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA263D7325BC25C6006EB870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA263D5125BC25C2006EB870 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA263D5825BC25C2006EB870;
+			remoteInfo = TwisCodeTest;
+		};
+		FA263D7E25BC25C6006EB870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA263D5125BC25C2006EB870 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA263D5825BC25C2006EB870;
+			remoteInfo = TwisCodeTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18B0DBA21BDD36BCEF5CC140 /* Pods-TwisCodeTest-TwisCodeTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwisCodeTest-TwisCodeTestUITests.release.xcconfig"; path = "Target Support Files/Pods-TwisCodeTest-TwisCodeTestUITests/Pods-TwisCodeTest-TwisCodeTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		31419EC56FBB2C73562684DD /* Pods_TwisCodeTest_TwisCodeTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwisCodeTest_TwisCodeTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B221EAC0D1DDAED9D8E1A96 /* Pods-TwisCodeTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwisCodeTestTests.release.xcconfig"; path = "Target Support Files/Pods-TwisCodeTestTests/Pods-TwisCodeTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		40D7CD24815015F538F10F2D /* Pods-TwisCodeTest-TwisCodeTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwisCodeTest-TwisCodeTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-TwisCodeTest-TwisCodeTestUITests/Pods-TwisCodeTest-TwisCodeTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		64161E6D72B5CF4ECA808836 /* Pods-TwisCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwisCodeTest.release.xcconfig"; path = "Target Support Files/Pods-TwisCodeTest/Pods-TwisCodeTest.release.xcconfig"; sourceTree = "<group>"; };
+		721F6C5754DE18D77587C2E1 /* Pods_TwisCodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwisCodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E5718BD7B70569E2B5FEE3 /* Pods_TwisCodeTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwisCodeTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6536D9CBAC902804DDA068 /* Pods-TwisCodeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwisCodeTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TwisCodeTestTests/Pods-TwisCodeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D015645F5138A8D88980CC5 /* Pods-TwisCodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwisCodeTest.debug.xcconfig"; path = "Target Support Files/Pods-TwisCodeTest/Pods-TwisCodeTest.debug.xcconfig"; sourceTree = "<group>"; };
+		FA263D5925BC25C2006EB870 /* TwisCodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwisCodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA263D5C25BC25C2006EB870 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA263D5E25BC25C2006EB870 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA263D6025BC25C2006EB870 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA263D6325BC25C3006EB870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA263D6625BC25C3006EB870 /* TwisCodeTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwisCodeTest.xcdatamodel; sourceTree = "<group>"; };
+		FA263D6825BC25C6006EB870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA263D6B25BC25C6006EB870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA263D6D25BC25C6006EB870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA263D7225BC25C6006EB870 /* TwisCodeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwisCodeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA263D7625BC25C6006EB870 /* TwisCodeTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwisCodeTestTests.swift; sourceTree = "<group>"; };
+		FA263D7825BC25C6006EB870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA263D7D25BC25C6006EB870 /* TwisCodeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwisCodeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA263D8125BC25C6006EB870 /* TwisCodeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwisCodeTestUITests.swift; sourceTree = "<group>"; };
+		FA263D8325BC25C6006EB870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA263D9925BC280D006EB870 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FA263D9A25BC280D006EB870 /* Default_photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Default_photo.swift; sourceTree = "<group>"; };
+		FA263D9B25BC280D006EB870 /* Get_address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Get_address.swift; sourceTree = "<group>"; };
+		FA263D9C25BC280D006EB870 /* Item_currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item_currency.swift; sourceTree = "<group>"; };
+		FA263D9D25BC280D006EB870 /* Deal_option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deal_option.swift; sourceTree = "<group>"; };
+		FA263D9E25BC280D006EB870 /* Item_location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item_location.swift; sourceTree = "<group>"; };
+		FA263D9F25BC280D006EB870 /* Default_icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Default_icon.swift; sourceTree = "<group>"; };
+		FA263DA025BC280D006EB870 /* Condition_of_item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition_of_item.swift; sourceTree = "<group>"; };
+		FA263DA125BC280D006EB870 /* Get_delivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Get_delivery.swift; sourceTree = "<group>"; };
+		FA263DA225BC280E006EB870 /* Sub_category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sub_category.swift; sourceTree = "<group>"; };
+		FA263DA325BC280E006EB870 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA263DA425BC280E006EB870 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FA263DA525BC280E006EB870 /* Item_price_type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item_price_type.swift; sourceTree = "<group>"; };
+		FA263DA625BC280E006EB870 /* Item_type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item_type.swift; sourceTree = "<group>"; };
+		FA263DA725BC280E006EB870 /* Rating_details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating_details.swift; sourceTree = "<group>"; };
+		FA33899925BC5AE600926294 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA33899A25BC5AE600926294 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA3389EB25BC786700926294 /* BadgeBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBarButton.swift; sourceTree = "<group>"; };
+		FA3389F425BC8A0500926294 /* LocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSource.swift; sourceTree = "<group>"; };
+		FA338A0225BC94AC00926294 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA263D5625BC25C2006EB870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA263D9425BC269E006EB870 /* Alamofire in Frameworks */,
+				05768F4864B750AC460FDA3E /* Pods_TwisCodeTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA263D6F25BC25C6006EB870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F3993AA1BA760E9C25EFFE /* Pods_TwisCodeTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA263D7A25BC25C6006EB870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390DCD1E5D3BAEB7A8B037B2 /* Pods_TwisCodeTest_TwisCodeTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5551BBAD069289422877B666 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D015645F5138A8D88980CC5 /* Pods-TwisCodeTest.debug.xcconfig */,
+				64161E6D72B5CF4ECA808836 /* Pods-TwisCodeTest.release.xcconfig */,
+				40D7CD24815015F538F10F2D /* Pods-TwisCodeTest-TwisCodeTestUITests.debug.xcconfig */,
+				18B0DBA21BDD36BCEF5CC140 /* Pods-TwisCodeTest-TwisCodeTestUITests.release.xcconfig */,
+				8D6536D9CBAC902804DDA068 /* Pods-TwisCodeTestTests.debug.xcconfig */,
+				3B221EAC0D1DDAED9D8E1A96 /* Pods-TwisCodeTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D25271AC3ECB84C72A884F24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				721F6C5754DE18D77587C2E1 /* Pods_TwisCodeTest.framework */,
+				31419EC56FBB2C73562684DD /* Pods_TwisCodeTest_TwisCodeTestUITests.framework */,
+				85E5718BD7B70569E2B5FEE3 /* Pods_TwisCodeTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA263D5025BC25C2006EB870 = {
+			isa = PBXGroup;
+			children = (
+				FA263D5B25BC25C2006EB870 /* TwisCodeTest */,
+				FA263D7525BC25C6006EB870 /* TwisCodeTestTests */,
+				FA263D8025BC25C6006EB870 /* TwisCodeTestUITests */,
+				FA263D5A25BC25C2006EB870 /* Products */,
+				5551BBAD069289422877B666 /* Pods */,
+				D25271AC3ECB84C72A884F24 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA263D5A25BC25C2006EB870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA263D5925BC25C2006EB870 /* TwisCodeTest.app */,
+				FA263D7225BC25C6006EB870 /* TwisCodeTestTests.xctest */,
+				FA263D7D25BC25C6006EB870 /* TwisCodeTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA263D5B25BC25C2006EB870 /* TwisCodeTest */ = {
+			isa = PBXGroup;
+			children = (
+				FA338A0125BC949200926294 /* Presentation */,
+				FA3389F325BC89F500926294 /* Repository */,
+				FA3389EA25BC785500926294 /* extension */,
+				FA263D9825BC2800006EB870 /* Model */,
+				FA263D5C25BC25C2006EB870 /* AppDelegate.swift */,
+				FA263D5E25BC25C2006EB870 /* SceneDelegate.swift */,
+				FA263D6225BC25C3006EB870 /* Main.storyboard */,
+				FA263D6825BC25C6006EB870 /* Assets.xcassets */,
+				FA263D6A25BC25C6006EB870 /* LaunchScreen.storyboard */,
+				FA263D6D25BC25C6006EB870 /* Info.plist */,
+				FA263D6525BC25C3006EB870 /* TwisCodeTest.xcdatamodeld */,
+			);
+			path = TwisCodeTest;
+			sourceTree = "<group>";
+		};
+		FA263D7525BC25C6006EB870 /* TwisCodeTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA263D7625BC25C6006EB870 /* TwisCodeTestTests.swift */,
+				FA263D7825BC25C6006EB870 /* Info.plist */,
+			);
+			path = TwisCodeTestTests;
+			sourceTree = "<group>";
+		};
+		FA263D8025BC25C6006EB870 /* TwisCodeTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA263D8125BC25C6006EB870 /* TwisCodeTestUITests.swift */,
+				FA263D8325BC25C6006EB870 /* Info.plist */,
+			);
+			path = TwisCodeTestUITests;
+			sourceTree = "<group>";
+		};
+		FA263D9825BC2800006EB870 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA263DA425BC280E006EB870 /* Category.swift */,
+				FA263DA025BC280D006EB870 /* Condition_of_item.swift */,
+				FA263D9D25BC280D006EB870 /* Deal_option.swift */,
+				FA263D9F25BC280D006EB870 /* Default_icon.swift */,
+				FA263D9A25BC280D006EB870 /* Default_photo.swift */,
+				FA263D9B25BC280D006EB870 /* Get_address.swift */,
+				FA263DA125BC280D006EB870 /* Get_delivery.swift */,
+				FA263D9C25BC280D006EB870 /* Item_currency.swift */,
+				FA263D9E25BC280D006EB870 /* Item_location.swift */,
+				FA263DA525BC280E006EB870 /* Item_price_type.swift */,
+				FA263DA625BC280E006EB870 /* Item_type.swift */,
+				FA263D9925BC280D006EB870 /* Response.swift */,
+				FA263DA725BC280E006EB870 /* Rating_details.swift */,
+				FA263DA225BC280E006EB870 /* Sub_category.swift */,
+				FA263DA325BC280E006EB870 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA3389EA25BC785500926294 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA3389EB25BC786700926294 /* BadgeBarButton.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		FA3389F325BC89F500926294 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FA3389F425BC8A0500926294 /* LocalSource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA338A0125BC949200926294 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FA338A0B25BC94BD00926294 /* Cart */,
+				FA338A0A25BC94B000926294 /* Catalog */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FA338A0A25BC94B000926294 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				FA338A0C25BC94F500926294 /* Adapter */,
+				FA263D6025BC25C2006EB870 /* ViewController.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		FA338A0B25BC94BD00926294 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				FA338A0225BC94AC00926294 /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		FA338A0C25BC94F500926294 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				FA33899925BC5AE600926294 /* ProductCollectionViewCell.swift */,
+				FA33899A25BC5AE600926294 /* ProductCollectionViewCell.xib */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA263D5825BC25C2006EB870 /* TwisCodeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA263D8625BC25C6006EB870 /* Build configuration list for PBXNativeTarget "TwisCodeTest" */;
+			buildPhases = (
+				21CFD1C3947072DC40A06ADA /* [CP] Check Pods Manifest.lock */,
+				FA263D5525BC25C2006EB870 /* Sources */,
+				FA263D5625BC25C2006EB870 /* Frameworks */,
+				FA263D5725BC25C2006EB870 /* Resources */,
+				38712538A4EA35CBE55FFBE6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwisCodeTest;
+			packageProductDependencies = (
+				FA263D9325BC269E006EB870 /* Alamofire */,
+			);
+			productName = TwisCodeTest;
+			productReference = FA263D5925BC25C2006EB870 /* TwisCodeTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA263D7125BC25C6006EB870 /* TwisCodeTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA263D8925BC25C6006EB870 /* Build configuration list for PBXNativeTarget "TwisCodeTestTests" */;
+			buildPhases = (
+				5C8197180C768C3AA26C51E4 /* [CP] Check Pods Manifest.lock */,
+				FA263D6E25BC25C6006EB870 /* Sources */,
+				FA263D6F25BC25C6006EB870 /* Frameworks */,
+				FA263D7025BC25C6006EB870 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA263D7425BC25C6006EB870 /* PBXTargetDependency */,
+			);
+			name = TwisCodeTestTests;
+			productName = TwisCodeTestTests;
+			productReference = FA263D7225BC25C6006EB870 /* TwisCodeTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA263D7C25BC25C6006EB870 /* TwisCodeTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA263D8C25BC25C6006EB870 /* Build configuration list for PBXNativeTarget "TwisCodeTestUITests" */;
+			buildPhases = (
+				CACA12B827C2CEC3E5AC4DCB /* [CP] Check Pods Manifest.lock */,
+				FA263D7925BC25C6006EB870 /* Sources */,
+				FA263D7A25BC25C6006EB870 /* Frameworks */,
+				FA263D7B25BC25C6006EB870 /* Resources */,
+				E8BF2011F226F3B18ACCE98F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA263D7F25BC25C6006EB870 /* PBXTargetDependency */,
+			);
+			name = TwisCodeTestUITests;
+			productName = TwisCodeTestUITests;
+			productReference = FA263D7D25BC25C6006EB870 /* TwisCodeTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA263D5125BC25C2006EB870 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					FA263D5825BC25C2006EB870 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					FA263D7125BC25C6006EB870 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = FA263D5825BC25C2006EB870;
+					};
+					FA263D7C25BC25C6006EB870 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = FA263D5825BC25C2006EB870;
+					};
+				};
+			};
+			buildConfigurationList = FA263D5425BC25C2006EB870 /* Build configuration list for PBXProject "TwisCodeTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA263D5025BC25C2006EB870;
+			packageReferences = (
+				FA263D9225BC269E006EB870 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = FA263D5A25BC25C2006EB870 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA263D5825BC25C2006EB870 /* TwisCodeTest */,
+				FA263D7125BC25C6006EB870 /* TwisCodeTestTests */,
+				FA263D7C25BC25C6006EB870 /* TwisCodeTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA263D5725BC25C2006EB870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA263D6C25BC25C6006EB870 /* LaunchScreen.storyboard in Resources */,
+				FA33899C25BC5AE600926294 /* ProductCollectionViewCell.xib in Resources */,
+				FA263D6925BC25C6006EB870 /* Assets.xcassets in Resources */,
+				FA263D6425BC25C3006EB870 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA263D7025BC25C6006EB870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA263D7B25BC25C6006EB870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21CFD1C3947072DC40A06ADA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwisCodeTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38712538A4EA35CBE55FFBE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwisCodeTest/Pods-TwisCodeTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwisCodeTest/Pods-TwisCodeTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwisCodeTest/Pods-TwisCodeTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C8197180C768C3AA26C51E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwisCodeTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CACA12B827C2CEC3E5AC4DCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwisCodeTest-TwisCodeTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8BF2011F226F3B18ACCE98F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwisCodeTest-TwisCodeTestUITests/Pods-TwisCodeTest-TwisCodeTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwisCodeTest-TwisCodeTestUITests/Pods-TwisCodeTest-TwisCodeTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwisCodeTest-TwisCodeTestUITests/Pods-TwisCodeTest-TwisCodeTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA263D5525BC25C2006EB870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3389F525BC8A0500926294 /* LocalSource.swift in Sources */,
+				FA263D6125BC25C2006EB870 /* ViewController.swift in Sources */,
+				FA263D5D25BC25C2006EB870 /* AppDelegate.swift in Sources */,
+				FA263DA925BC280E006EB870 /* Default_photo.swift in Sources */,
+				FA263DB625BC280E006EB870 /* Rating_details.swift in Sources */,
+				FA263DAF25BC280E006EB870 /* Condition_of_item.swift in Sources */,
+				FA263DAD25BC280E006EB870 /* Item_location.swift in Sources */,
+				FA263D5F25BC25C2006EB870 /* SceneDelegate.swift in Sources */,
+				FA263DAC25BC280E006EB870 /* Deal_option.swift in Sources */,
+				FA33899B25BC5AE600926294 /* ProductCollectionViewCell.swift in Sources */,
+				FA263DB325BC280E006EB870 /* Category.swift in Sources */,
+				FA3389EC25BC786700926294 /* BadgeBarButton.swift in Sources */,
+				FA263DB425BC280E006EB870 /* Item_price_type.swift in Sources */,
+				FA263DA825BC280E006EB870 /* Response.swift in Sources */,
+				FA338A0325BC94AC00926294 /* CartViewController.swift in Sources */,
+				FA263DB225BC280E006EB870 /* User.swift in Sources */,
+				FA263DB125BC280E006EB870 /* Sub_category.swift in Sources */,
+				FA263D6725BC25C3006EB870 /* TwisCodeTest.xcdatamodeld in Sources */,
+				FA263DAE25BC280E006EB870 /* Default_icon.swift in Sources */,
+				FA263DB525BC280E006EB870 /* Item_type.swift in Sources */,
+				FA263DAA25BC280E006EB870 /* Get_address.swift in Sources */,
+				FA263DB025BC280E006EB870 /* Get_delivery.swift in Sources */,
+				FA263DAB25BC280E006EB870 /* Item_currency.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA263D6E25BC25C6006EB870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA263D7725BC25C6006EB870 /* TwisCodeTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA263D7925BC25C6006EB870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA263D8225BC25C6006EB870 /* TwisCodeTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA263D7425BC25C6006EB870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA263D5825BC25C2006EB870 /* TwisCodeTest */;
+			targetProxy = FA263D7325BC25C6006EB870 /* PBXContainerItemProxy */;
+		};
+		FA263D7F25BC25C6006EB870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA263D5825BC25C2006EB870 /* TwisCodeTest */;
+			targetProxy = FA263D7E25BC25C6006EB870 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA263D6225BC25C3006EB870 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA263D6325BC25C3006EB870 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA263D6A25BC25C6006EB870 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA263D6B25BC25C6006EB870 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA263D8425BC25C6006EB870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA263D8525BC25C6006EB870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA263D8725BC25C6006EB870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D015645F5138A8D88980CC5 /* Pods-TwisCodeTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988U3HL37J;
+				INFOPLIST_FILE = TwisCodeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nostratech.TwisCodeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA263D8825BC25C6006EB870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64161E6D72B5CF4ECA808836 /* Pods-TwisCodeTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988U3HL37J;
+				INFOPLIST_FILE = TwisCodeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nostratech.TwisCodeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA263D8A25BC25C6006EB870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D6536D9CBAC902804DDA068 /* Pods-TwisCodeTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988U3HL37J;
+				INFOPLIST_FILE = TwisCodeTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nostratech.TwisCodeTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwisCodeTest.app/TwisCodeTest";
+			};
+			name = Debug;
+		};
+		FA263D8B25BC25C6006EB870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B221EAC0D1DDAED9D8E1A96 /* Pods-TwisCodeTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988U3HL37J;
+				INFOPLIST_FILE = TwisCodeTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nostratech.TwisCodeTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TwisCodeTest.app/TwisCodeTest";
+			};
+			name = Release;
+		};
+		FA263D8D25BC25C6006EB870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40D7CD24815015F538F10F2D /* Pods-TwisCodeTest-TwisCodeTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988U3HL37J;
+				INFOPLIST_FILE = TwisCodeTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nostratech.TwisCodeTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TwisCodeTest;
+			};
+			name = Debug;
+		};
+		FA263D8E25BC25C6006EB870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B0DBA21BDD36BCEF5CC140 /* Pods-TwisCodeTest-TwisCodeTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 988U3HL37J;
+				INFOPLIST_FILE = TwisCodeTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nostratech.TwisCodeTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TwisCodeTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA263D5425BC25C2006EB870 /* Build configuration list for PBXProject "TwisCodeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA263D8425BC25C6006EB870 /* Debug */,
+				FA263D8525BC25C6006EB870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA263D8625BC25C6006EB870 /* Build configuration list for PBXNativeTarget "TwisCodeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA263D8725BC25C6006EB870 /* Debug */,
+				FA263D8825BC25C6006EB870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA263D8925BC25C6006EB870 /* Build configuration list for PBXNativeTarget "TwisCodeTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA263D8A25BC25C6006EB870 /* Debug */,
+				FA263D8B25BC25C6006EB870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA263D8C25BC25C6006EB870 /* Build configuration list for PBXNativeTarget "TwisCodeTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA263D8D25BC25C6006EB870 /* Debug */,
+				FA263D8E25BC25C6006EB870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA263D9225BC269E006EB870 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA263D9325BC269E006EB870 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA263D9225BC269E006EB870 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FA263D6525BC25C3006EB870 /* TwisCodeTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA263D6625BC25C3006EB870 /* TwisCodeTest.xcdatamodel */,
+			);
+			currentVersion = FA263D6625BC25C3006EB870 /* TwisCodeTest.xcdatamodel */;
+			path = TwisCodeTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA263D5125BC25C2006EB870 /* Project object */;
+}

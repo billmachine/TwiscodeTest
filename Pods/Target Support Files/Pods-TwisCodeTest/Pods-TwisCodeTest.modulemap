@@ -1,0 +1,6 @@
+framework module Pods_TwisCodeTest {
+  umbrella header "Pods-TwisCodeTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
