@@ -12,33 +12,32 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Condition_of_item : Codable {
+struct Get_delivery : Codable {
 	let id : String?
-	let name : String?
-	let status : String?
-	let added_date : String?
+	let bs_items_id : String?
+	let delivery_name : String?
+	let created_at : String?
+	let updated_at : String?
+	let deleted_at : String?
 
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"
-		case name = "name"
-		case status = "status"
-		case added_date = "added_date"
+		case bs_items_id = "bs_items_id"
+		case delivery_name = "delivery_name"
+		case created_at = "created_at"
+		case updated_at = "updated_at"
+		case deleted_at = "deleted_at"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
-		name = try values.decodeIfPresent(String.self, forKey: .name)
-		status = try values.decodeIfPresent(String.self, forKey: .status)
-		added_date = try values.decodeIfPresent(String.self, forKey: .added_date)
+		bs_items_id = try values.decodeIfPresent(String.self, forKey: .bs_items_id)
+		delivery_name = try values.decodeIfPresent(String.self, forKey: .delivery_name)
+		created_at = try values.decodeIfPresent(String.self, forKey: .created_at)
+		updated_at = try values.decodeIfPresent(String.self, forKey: .updated_at)
+		deleted_at = try values.decodeIfPresent(String.self, forKey: .deleted_at)
 	}
-    
-    init(name:String?) {
-        self.name = name
-        self.id = ""
-        self.status = ""
-        self.added_date = ""
-    }
 
 }

@@ -12,33 +12,35 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Condition_of_item : Codable {
+struct Item_location : Codable {
 	let id : String?
 	let name : String?
+	let lat : String?
+	let lng : String?
 	let status : String?
 	let added_date : String?
+	let is_empty_object : String?
 
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"
 		case name = "name"
+		case lat = "lat"
+		case lng = "lng"
 		case status = "status"
 		case added_date = "added_date"
+		case is_empty_object = "is_empty_object"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
+		lat = try values.decodeIfPresent(String.self, forKey: .lat)
+		lng = try values.decodeIfPresent(String.self, forKey: .lng)
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		added_date = try values.decodeIfPresent(String.self, forKey: .added_date)
+		is_empty_object = try values.decodeIfPresent(String.self, forKey: .is_empty_object)
 	}
-    
-    init(name:String?) {
-        self.name = name
-        self.id = ""
-        self.status = ""
-        self.added_date = ""
-    }
 
 }

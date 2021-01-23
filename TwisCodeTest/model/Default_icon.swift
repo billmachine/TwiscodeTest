@@ -12,33 +12,35 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Condition_of_item : Codable {
-	let id : String?
-	let name : String?
-	let status : String?
-	let added_date : String?
+struct Default_icon : Codable {
+	let img_id : String?
+	let img_parent_id : String?
+	let img_type : String?
+	let img_path : String?
+	let img_width : String?
+	let img_height : String?
+	let img_desc : String?
 
 	enum CodingKeys: String, CodingKey {
 
-		case id = "id"
-		case name = "name"
-		case status = "status"
-		case added_date = "added_date"
+		case img_id = "img_id"
+		case img_parent_id = "img_parent_id"
+		case img_type = "img_type"
+		case img_path = "img_path"
+		case img_width = "img_width"
+		case img_height = "img_height"
+		case img_desc = "img_desc"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		id = try values.decodeIfPresent(String.self, forKey: .id)
-		name = try values.decodeIfPresent(String.self, forKey: .name)
-		status = try values.decodeIfPresent(String.self, forKey: .status)
-		added_date = try values.decodeIfPresent(String.self, forKey: .added_date)
+		img_id = try values.decodeIfPresent(String.self, forKey: .img_id)
+		img_parent_id = try values.decodeIfPresent(String.self, forKey: .img_parent_id)
+		img_type = try values.decodeIfPresent(String.self, forKey: .img_type)
+		img_path = try values.decodeIfPresent(String.self, forKey: .img_path)
+		img_width = try values.decodeIfPresent(String.self, forKey: .img_width)
+		img_height = try values.decodeIfPresent(String.self, forKey: .img_height)
+		img_desc = try values.decodeIfPresent(String.self, forKey: .img_desc)
 	}
-    
-    init(name:String?) {
-        self.name = name
-        self.id = ""
-        self.status = ""
-        self.added_date = ""
-    }
 
 }

@@ -12,7 +12,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Condition_of_item : Codable {
+struct Deal_option : Codable {
 	let id : String?
 	let name : String?
 	let status : String?
@@ -33,12 +33,5 @@ struct Condition_of_item : Codable {
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		added_date = try values.decodeIfPresent(String.self, forKey: .added_date)
 	}
-    
-    init(name:String?) {
-        self.name = name
-        self.id = ""
-        self.status = ""
-        self.added_date = ""
-    }
 
 }

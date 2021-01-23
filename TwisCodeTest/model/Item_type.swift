@@ -12,11 +12,12 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Condition_of_item : Codable {
+struct Item_type : Codable {
 	let id : String?
 	let name : String?
 	let status : String?
 	let added_date : String?
+	let is_empty_object : String?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -24,6 +25,7 @@ struct Condition_of_item : Codable {
 		case name = "name"
 		case status = "status"
 		case added_date = "added_date"
+		case is_empty_object = "is_empty_object"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -32,13 +34,7 @@ struct Condition_of_item : Codable {
 		name = try values.decodeIfPresent(String.self, forKey: .name)
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		added_date = try values.decodeIfPresent(String.self, forKey: .added_date)
+		is_empty_object = try values.decodeIfPresent(String.self, forKey: .is_empty_object)
 	}
-    
-    init(name:String?) {
-        self.name = name
-        self.id = ""
-        self.status = ""
-        self.added_date = ""
-    }
 
 }

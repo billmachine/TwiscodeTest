@@ -12,33 +12,35 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Condition_of_item : Codable {
-	let id : String?
-	let name : String?
+struct Category : Codable {
+	let cat_id : String?
+	let cat_name : String?
+	let cat_ordering : String?
 	let status : String?
 	let added_date : String?
+	let default_photo : Default_photo?
+	let default_icon : Default_icon?
 
 	enum CodingKeys: String, CodingKey {
 
-		case id = "id"
-		case name = "name"
+		case cat_id = "cat_id"
+		case cat_name = "cat_name"
+		case cat_ordering = "cat_ordering"
 		case status = "status"
 		case added_date = "added_date"
+		case default_photo = "default_photo"
+		case default_icon = "default_icon"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		id = try values.decodeIfPresent(String.self, forKey: .id)
-		name = try values.decodeIfPresent(String.self, forKey: .name)
+		cat_id = try values.decodeIfPresent(String.self, forKey: .cat_id)
+		cat_name = try values.decodeIfPresent(String.self, forKey: .cat_name)
+		cat_ordering = try values.decodeIfPresent(String.self, forKey: .cat_ordering)
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		added_date = try values.decodeIfPresent(String.self, forKey: .added_date)
+		default_photo = try values.decodeIfPresent(Default_photo.self, forKey: .default_photo)
+		default_icon = try values.decodeIfPresent(Default_icon.self, forKey: .default_icon)
 	}
-    
-    init(name:String?) {
-        self.name = name
-        self.id = ""
-        self.status = ""
-        self.added_date = ""
-    }
 
 }

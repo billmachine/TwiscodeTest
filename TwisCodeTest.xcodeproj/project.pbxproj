@@ -40,6 +40,9 @@
 		FA3389EC25BC786700926294 /* BadgeBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3389EB25BC786700926294 /* BadgeBarButton.swift */; };
 		FA3389F525BC8A0500926294 /* LocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3389F425BC8A0500926294 /* LocalSource.swift */; };
 		FA338A0325BC94AC00926294 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A0225BC94AC00926294 /* CartViewController.swift */; };
+		FA338A2225BC96BA00926294 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A2025BC96BA00926294 /* CartTableViewCell.swift */; };
+		FA338A2325BC96BA00926294 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA338A2125BC96BA00926294 /* CartTableViewCell.xib */; };
+		FA338A6825BCC1C400926294 /* UIShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A6725BCC1C400926294 /* UIShadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		FA3389EB25BC786700926294 /* BadgeBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBarButton.swift; sourceTree = "<group>"; };
 		FA3389F425BC8A0500926294 /* LocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSource.swift; sourceTree = "<group>"; };
 		FA338A0225BC94AC00926294 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		FA338A2025BC96BA00926294 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		FA338A2125BC96BA00926294 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		FA338A6725BCC1C400926294 /* UIShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,9 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				FA338A0125BC949200926294 /* Presentation */,
-				FA3389F325BC89F500926294 /* Repository */,
+				FA3389F325BC89F500926294 /* repository */,
 				FA3389EA25BC785500926294 /* extension */,
-				FA263D9825BC2800006EB870 /* Model */,
+				FA263D9825BC2800006EB870 /* model */,
 				FA263D5C25BC25C2006EB870 /* AppDelegate.swift */,
 				FA263D5E25BC25C2006EB870 /* SceneDelegate.swift */,
 				FA263D6225BC25C3006EB870 /* Main.storyboard */,
@@ -216,7 +222,7 @@
 			path = TwisCodeTestUITests;
 			sourceTree = "<group>";
 		};
-		FA263D9825BC2800006EB870 /* Model */ = {
+		FA263D9825BC2800006EB870 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				FA263DA425BC280E006EB870 /* Category.swift */,
@@ -235,49 +241,51 @@
 				FA263DA225BC280E006EB870 /* Sub_category.swift */,
 				FA263DA325BC280E006EB870 /* User.swift */,
 			);
-			path = Model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		FA3389EA25BC785500926294 /* extension */ = {
 			isa = PBXGroup;
 			children = (
 				FA3389EB25BC786700926294 /* BadgeBarButton.swift */,
+				FA338A6725BCC1C400926294 /* UIShadow.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
 		};
-		FA3389F325BC89F500926294 /* Repository */ = {
+		FA3389F325BC89F500926294 /* repository */ = {
 			isa = PBXGroup;
 			children = (
 				FA3389F425BC8A0500926294 /* LocalSource.swift */,
 			);
-			path = Repository;
+			path = repository;
 			sourceTree = "<group>";
 		};
 		FA338A0125BC949200926294 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FA338A0B25BC94BD00926294 /* Cart */,
-				FA338A0A25BC94B000926294 /* Catalog */,
+				FA338A0B25BC94BD00926294 /* cart */,
+				FA338A0A25BC94B000926294 /* catalog */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		FA338A0A25BC94B000926294 /* Catalog */ = {
+		FA338A0A25BC94B000926294 /* catalog */ = {
 			isa = PBXGroup;
 			children = (
 				FA338A0C25BC94F500926294 /* Adapter */,
 				FA263D6025BC25C2006EB870 /* ViewController.swift */,
 			);
-			path = Catalog;
+			path = catalog;
 			sourceTree = "<group>";
 		};
-		FA338A0B25BC94BD00926294 /* Cart */ = {
+		FA338A0B25BC94BD00926294 /* cart */ = {
 			isa = PBXGroup;
 			children = (
+				FA338A1325BC967A00926294 /* adapter */,
 				FA338A0225BC94AC00926294 /* CartViewController.swift */,
 			);
-			path = Cart;
+			path = cart;
 			sourceTree = "<group>";
 		};
 		FA338A0C25BC94F500926294 /* Adapter */ = {
@@ -287,6 +295,15 @@
 				FA33899A25BC5AE600926294 /* ProductCollectionViewCell.xib */,
 			);
 			path = Adapter;
+			sourceTree = "<group>";
+		};
+		FA338A1325BC967A00926294 /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				FA338A2025BC96BA00926294 /* CartTableViewCell.swift */,
+				FA338A2125BC96BA00926294 /* CartTableViewCell.xib */,
+			);
+			path = adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA338A2325BC96BA00926294 /* CartTableViewCell.xib in Resources */,
 				FA263D6C25BC25C6006EB870 /* LaunchScreen.storyboard in Resources */,
 				FA33899C25BC5AE600926294 /* ProductCollectionViewCell.xib in Resources */,
 				FA263D6925BC25C6006EB870 /* Assets.xcassets in Resources */,
@@ -543,12 +561,14 @@
 				FA263DAD25BC280E006EB870 /* Item_location.swift in Sources */,
 				FA263D5F25BC25C2006EB870 /* SceneDelegate.swift in Sources */,
 				FA263DAC25BC280E006EB870 /* Deal_option.swift in Sources */,
+				FA338A6825BCC1C400926294 /* UIShadow.swift in Sources */,
 				FA33899B25BC5AE600926294 /* ProductCollectionViewCell.swift in Sources */,
 				FA263DB325BC280E006EB870 /* Category.swift in Sources */,
 				FA3389EC25BC786700926294 /* BadgeBarButton.swift in Sources */,
 				FA263DB425BC280E006EB870 /* Item_price_type.swift in Sources */,
 				FA263DA825BC280E006EB870 /* Response.swift in Sources */,
 				FA338A0325BC94AC00926294 /* CartViewController.swift in Sources */,
+				FA338A2225BC96BA00926294 /* CartTableViewCell.swift in Sources */,
 				FA263DB225BC280E006EB870 /* User.swift in Sources */,
 				FA263DB125BC280E006EB870 /* Sub_category.swift in Sources */,
 				FA263D6725BC25C3006EB870 /* TwisCodeTest.xcdatamodeld in Sources */,
