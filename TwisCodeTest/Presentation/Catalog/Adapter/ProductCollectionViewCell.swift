@@ -11,7 +11,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     static let identifier = String(describing: ProductCollectionViewCell.self)
     
     override func awakeFromNib() {
-        super.awakeFromNib()
+        super.awakeFromNib() 
         // Initialization code
     }
 
