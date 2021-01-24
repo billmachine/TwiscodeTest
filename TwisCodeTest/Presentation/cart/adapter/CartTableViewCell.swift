@@ -36,7 +36,7 @@ class CartTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         quantityStepper.maximumValue = 1.0
         quantityStepper.minimumValue = 0.0
         quantityStepper.value = 0.5
@@ -46,7 +46,6 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @objc func textFieldDidChange(textField: UITextField) {
-//        print(textField.text)
         self.onchangeQuantity!(textField.text ?? "")
     }
     
@@ -88,8 +87,6 @@ class CartTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
@@ -104,10 +101,6 @@ extension CartTableViewCell : UITextFieldDelegate{
         
         guard let text = textField.text else { return true }
         let newLength = text.count + string.count - range.length
-        
-//        if newLength <= 3 { self.self.onchangeQuantity!(textField.text ?? "") }
         return newLength <= 3
-//
-
     }
 }

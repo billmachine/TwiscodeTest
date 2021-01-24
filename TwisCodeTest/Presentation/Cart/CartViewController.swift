@@ -48,7 +48,6 @@ class CartViewController: UIViewController {
                         .dequeueReusableCell(withIdentifier:CartTableViewCell.identifier, for: indexPath)
                         as? CartTableViewCell else { return UITableViewCell() }
                 cell.fill(product: product)
-//                cell.etQuantity.delegate = self
                 cell.btnQuantityDown = {
                     self.viewModel.decreaseQuantity(product:product){ updatedProduct in
                         if let product = updatedProduct {
@@ -72,7 +71,7 @@ class CartViewController: UIViewController {
                 cell.onchangeQuantity = { text in
                     print(text.count)
                     let tempProduct = product
-//                    print(text)
+
                     if text.count > 0 {
                     tempProduct.quantity = text
                     self.viewModel.updateProduct(product:tempProduct)
@@ -92,17 +91,3 @@ class CartViewController: UIViewController {
     }
     
 }
-
-//extension CartViewController : UITextFieldDelegate{
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//
-//        print(textField.tag)
-//        let allowedCharacters = CharacterSet.decimalDigits
-//        let characterSet = CharacterSet(charactersIn: string)
-//        if allowedCharacters.isSuperset(of: characterSet) == false { return false }
-//
-//        guard let text = textField.text else { return true }
-//        let newLength = text.count + string.count - range.length
-//        return newLength <= 3
-//    }
-//}

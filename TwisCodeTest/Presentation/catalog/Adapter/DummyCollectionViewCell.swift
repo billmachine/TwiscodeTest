@@ -13,10 +13,10 @@ class DummyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var txtDummy2: UILabel!
     @IBOutlet weak var txtDummy3: UILabel!
     static let identifier = String(describing: DummyCollectionViewCell.self)
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Initialization code
+
     }
     func didLoading(){
         txtDummy1.showAnimatedGradientSkeleton()

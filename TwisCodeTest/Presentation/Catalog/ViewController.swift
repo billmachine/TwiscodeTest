@@ -63,13 +63,7 @@ class ViewController: UIViewController {
         }
         
         _ = viewModel.displayedisInfo.subscribe {  warning in
-//            guard let info = warning else { return }
             self.observeisInfo(string: warning)
-//            DispatchQueue.main.async {
-//                let alert = UIAlertController(title: "Info", message: warning.element ?? "", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-//                self.present(alert, animated: true)
-//            }
         }
         
         _ = viewModel.displayedCart.subscribe {  localProduct in

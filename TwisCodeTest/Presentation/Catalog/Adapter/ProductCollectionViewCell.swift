@@ -22,11 +22,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib() 
-        // Initialization code
+        
     }
     
     func fill(product:Product) {
-//        labelTitle.text = product.id
         labelTitle.text = product.title
         
         if let price = product.price {
@@ -57,7 +56,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
                                 if (error != nil) {
                                     self.imgProduct.image = UIImage(named: "ic_placeholder")
                                 }
-        })
+                               })
         
     }
     

@@ -19,8 +19,6 @@ extension ViewController:UICollectionViewDelegateFlowLayout{
     }
 
     func calculateWith() -> CGFloat {
-//        let estimateWidth = 826.0
-//        let estimatedWidth = CGFloat(300);
         
         let estimatedWidth = CGFloat(150)
         let cellMarginSize = 5.0
