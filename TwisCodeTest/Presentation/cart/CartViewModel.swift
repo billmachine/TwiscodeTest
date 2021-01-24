@@ -14,7 +14,6 @@ enum ListPageState {
     case empty,loaded
 }
 
-
 class CartViewModel{
     var displayedCart  = BehaviorRelay<[Product]>(value: [])
     var displayedStrTotal  = BehaviorRelay<String>(value: "0")
@@ -38,17 +37,19 @@ class CartViewModel{
     }
     
     func refreshGetTotal(){
-        var total = 0
-        self.local.getAll { result in
-            result.map {
-                product in
-                var totalPerProduct = 0
-                if let priceInt = Int(product.price ?? "0"),let quantityInt = Int(product.quantity ?? "0"){
-                    totalPerProduct = priceInt * quantityInt
-                    total += totalPerProduct
+        DispatchQueue.global(qos: .background).async {
+            var total = 0
+            self.local.getAll { result in
+                result.map {
+                    product in
+                    var totalPerProduct = 0
+                    if let priceInt = Int(product.price ?? "0"),let quantityInt = Int(product.quantity ?? "0"){
+                        totalPerProduct = priceInt * quantityInt
+                        total += totalPerProduct
+                    }
                 }
+                self.displayedStrTotal.accept("\(total)")
             }
-            self.displayedStrTotal.accept("\(total)")
         }
     }
     
@@ -60,6 +61,7 @@ class CartViewModel{
                     self.getCart()
                     self.refreshGetTotal()
                 }
+                self.state.accept(.empty)
             }
             else {
                 local.getById(productId ) { result in
