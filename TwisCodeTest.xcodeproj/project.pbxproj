@@ -42,7 +42,21 @@
 		FA338A0325BC94AC00926294 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A0225BC94AC00926294 /* CartViewController.swift */; };
 		FA338A2225BC96BA00926294 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A2025BC96BA00926294 /* CartTableViewCell.swift */; };
 		FA338A2325BC96BA00926294 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA338A2125BC96BA00926294 /* CartTableViewCell.xib */; };
-		FA338A6825BCC1C400926294 /* UIShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A6725BCC1C400926294 /* UIShadow.swift */; };
+		FA338A6825BCC1C400926294 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A6725BCC1C400926294 /* UIView+Ext.swift */; };
+		FA338A6D25BCDA6400926294 /* RemoteSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A6C25BCDA6300926294 /* RemoteSource.swift */; };
+		FA338A7225BCDEB500926294 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A7125BCDEB500926294 /* CatalogViewModel.swift */; };
+		FA338A7825BCDEFC00926294 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA338A7725BCDEFC00926294 /* RxSwift */; };
+		FA338A7A25BCDEFC00926294 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FA338A7925BCDEFC00926294 /* RxRelay */; };
+		FA338A7C25BCDEFC00926294 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FA338A7B25BCDEFC00926294 /* RxCocoa */; };
+		FA338A7E25BCDEFC00926294 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = FA338A7D25BCDEFC00926294 /* RxBlocking */; };
+		FA338A8325BCE1A400926294 /* ViewController+FlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338A8225BCE1A400926294 /* ViewController+FlowDelegate.swift */; };
+		FA338A8925BCE3D400926294 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = FA338A8825BCE3D400926294 /* SkeletonView */; };
+		FA338AC025BCFBAB00926294 /* DummyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338ABE25BCFBAB00926294 /* DummyCollectionViewCell.swift */; };
+		FA338AC125BCFBAB00926294 /* DummyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA338ABF25BCFBAB00926294 /* DummyCollectionViewCell.xib */; };
+		FADC950B25BD6E9B00EC40B9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FADC950A25BD6E9B00EC40B9 /* SDWebImage */; };
+		FADC950D25BD6E9B00EC40B9 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FADC950C25BD6E9B00EC40B9 /* SDWebImageMapKit */; };
+		FADC951E25BDA6E000EC40B9 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC951D25BDA6E000EC40B9 /* CartViewModel.swift */; };
+		FADC952325BDA80700EC40B9 /* CartViewController+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC952225BDA80700EC40B9 /* CartViewController+setup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +123,14 @@
 		FA338A0225BC94AC00926294 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		FA338A2025BC96BA00926294 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		FA338A2125BC96BA00926294 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
-		FA338A6725BCC1C400926294 /* UIShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIShadow.swift; sourceTree = "<group>"; };
+		FA338A6725BCC1C400926294 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		FA338A6C25BCDA6300926294 /* RemoteSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSource.swift; sourceTree = "<group>"; };
+		FA338A7125BCDEB500926294 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		FA338A8225BCE1A400926294 /* ViewController+FlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+FlowDelegate.swift"; sourceTree = "<group>"; };
+		FA338ABE25BCFBAB00926294 /* DummyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA338ABF25BCFBAB00926294 /* DummyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DummyCollectionViewCell.xib; sourceTree = "<group>"; };
+		FADC951D25BDA6E000EC40B9 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		FADC952225BDA80700EC40B9 /* CartViewController+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartViewController+setup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +138,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA338A7825BCDEFC00926294 /* RxSwift in Frameworks */,
+				FADC950D25BD6E9B00EC40B9 /* SDWebImageMapKit in Frameworks */,
+				FA338A8925BCE3D400926294 /* SkeletonView in Frameworks */,
+				FADC950B25BD6E9B00EC40B9 /* SDWebImage in Frameworks */,
+				FA338A7E25BCDEFC00926294 /* RxBlocking in Frameworks */,
 				FA263D9425BC269E006EB870 /* Alamofire in Frameworks */,
+				FA338A7C25BCDEFC00926294 /* RxCocoa in Frameworks */,
+				FA338A7A25BCDEFC00926294 /* RxRelay in Frameworks */,
 				05768F4864B750AC460FDA3E /* Pods_TwisCodeTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3389EB25BC786700926294 /* BadgeBarButton.swift */,
-				FA338A6725BCC1C400926294 /* UIShadow.swift */,
+				FA338A6725BCC1C400926294 /* UIView+Ext.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -257,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3389F425BC8A0500926294 /* LocalSource.swift */,
+				FA338A6C25BCDA6300926294 /* RemoteSource.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -275,6 +304,8 @@
 			children = (
 				FA338A0C25BC94F500926294 /* Adapter */,
 				FA263D6025BC25C2006EB870 /* ViewController.swift */,
+				FA338A7125BCDEB500926294 /* CatalogViewModel.swift */,
+				FA338A8225BCE1A400926294 /* ViewController+FlowDelegate.swift */,
 			);
 			path = catalog;
 			sourceTree = "<group>";
@@ -284,6 +315,8 @@
 			children = (
 				FA338A1325BC967A00926294 /* adapter */,
 				FA338A0225BC94AC00926294 /* CartViewController.swift */,
+				FADC951D25BDA6E000EC40B9 /* CartViewModel.swift */,
+				FADC952225BDA80700EC40B9 /* CartViewController+setup.swift */,
 			);
 			path = cart;
 			sourceTree = "<group>";
@@ -293,6 +326,8 @@
 			children = (
 				FA33899925BC5AE600926294 /* ProductCollectionViewCell.swift */,
 				FA33899A25BC5AE600926294 /* ProductCollectionViewCell.xib */,
+				FA338ABE25BCFBAB00926294 /* DummyCollectionViewCell.swift */,
+				FA338ABF25BCFBAB00926294 /* DummyCollectionViewCell.xib */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -326,6 +361,13 @@
 			name = TwisCodeTest;
 			packageProductDependencies = (
 				FA263D9325BC269E006EB870 /* Alamofire */,
+				FA338A7725BCDEFC00926294 /* RxSwift */,
+				FA338A7925BCDEFC00926294 /* RxRelay */,
+				FA338A7B25BCDEFC00926294 /* RxCocoa */,
+				FA338A7D25BCDEFC00926294 /* RxBlocking */,
+				FA338A8825BCE3D400926294 /* SkeletonView */,
+				FADC950A25BD6E9B00EC40B9 /* SDWebImage */,
+				FADC950C25BD6E9B00EC40B9 /* SDWebImageMapKit */,
 			);
 			productName = TwisCodeTest;
 			productReference = FA263D5925BC25C2006EB870 /* TwisCodeTest.app */;
@@ -403,6 +445,9 @@
 			mainGroup = FA263D5025BC25C2006EB870;
 			packageReferences = (
 				FA263D9225BC269E006EB870 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FA338A7625BCDEFC00926294 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FA338A8725BCE3D400926294 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				FADC950925BD6E9B00EC40B9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = FA263D5A25BC25C2006EB870 /* Products */;
 			projectDirPath = "";
@@ -421,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA338A2325BC96BA00926294 /* CartTableViewCell.xib in Resources */,
+				FA338AC125BCFBAB00926294 /* DummyCollectionViewCell.xib in Resources */,
 				FA263D6C25BC25C6006EB870 /* LaunchScreen.storyboard in Resources */,
 				FA33899C25BC5AE600926294 /* ProductCollectionViewCell.xib in Resources */,
 				FA263D6925BC25C6006EB870 /* Assets.xcassets in Resources */,
@@ -553,22 +599,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3389F525BC8A0500926294 /* LocalSource.swift in Sources */,
+				FADC952325BDA80700EC40B9 /* CartViewController+setup.swift in Sources */,
 				FA263D6125BC25C2006EB870 /* ViewController.swift in Sources */,
 				FA263D5D25BC25C2006EB870 /* AppDelegate.swift in Sources */,
 				FA263DA925BC280E006EB870 /* Default_photo.swift in Sources */,
 				FA263DB625BC280E006EB870 /* Rating_details.swift in Sources */,
 				FA263DAF25BC280E006EB870 /* Condition_of_item.swift in Sources */,
+				FADC951E25BDA6E000EC40B9 /* CartViewModel.swift in Sources */,
 				FA263DAD25BC280E006EB870 /* Item_location.swift in Sources */,
 				FA263D5F25BC25C2006EB870 /* SceneDelegate.swift in Sources */,
 				FA263DAC25BC280E006EB870 /* Deal_option.swift in Sources */,
-				FA338A6825BCC1C400926294 /* UIShadow.swift in Sources */,
+				FA338A6825BCC1C400926294 /* UIView+Ext.swift in Sources */,
+				FA338A6D25BCDA6400926294 /* RemoteSource.swift in Sources */,
 				FA33899B25BC5AE600926294 /* ProductCollectionViewCell.swift in Sources */,
 				FA263DB325BC280E006EB870 /* Category.swift in Sources */,
 				FA3389EC25BC786700926294 /* BadgeBarButton.swift in Sources */,
 				FA263DB425BC280E006EB870 /* Item_price_type.swift in Sources */,
 				FA263DA825BC280E006EB870 /* Response.swift in Sources */,
 				FA338A0325BC94AC00926294 /* CartViewController.swift in Sources */,
+				FA338A7225BCDEB500926294 /* CatalogViewModel.swift in Sources */,
+				FA338AC025BCFBAB00926294 /* DummyCollectionViewCell.swift in Sources */,
 				FA338A2225BC96BA00926294 /* CartTableViewCell.swift in Sources */,
+				FA338A8325BCE1A400926294 /* ViewController+FlowDelegate.swift in Sources */,
 				FA263DB225BC280E006EB870 /* User.swift in Sources */,
 				FA263DB125BC280E006EB870 /* Sub_category.swift in Sources */,
 				FA263D6725BC25C3006EB870 /* TwisCodeTest.xcdatamodeld in Sources */,
@@ -682,7 +734,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -737,7 +789,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -925,6 +977,30 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		FA338A7625BCDEFC00926294 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		FA338A8725BCE3D400926294 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.0;
+			};
+		};
+		FADC950925BD6E9B00EC40B9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -932,6 +1008,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA263D9225BC269E006EB870 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		FA338A7725BCDEFC00926294 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA338A7625BCDEFC00926294 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		FA338A7925BCDEFC00926294 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA338A7625BCDEFC00926294 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FA338A7B25BCDEFC00926294 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA338A7625BCDEFC00926294 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FA338A7D25BCDEFC00926294 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA338A7625BCDEFC00926294 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		FA338A8825BCE3D400926294 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA338A8725BCE3D400926294 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		FADC950A25BD6E9B00EC40B9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADC950925BD6E9B00EC40B9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		FADC950C25BD6E9B00EC40B9 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADC950925BD6E9B00EC40B9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 

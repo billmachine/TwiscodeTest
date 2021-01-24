@@ -280,7 +280,7 @@ class Product : Codable {
 //	let added_date_str : String?
 //	let paid_status : String?
 //	let photo_count : String?
-//	let default_photo : Default_photo?
+	let default_photo : Default_photo?
 //	let category : Category?
 //	let sub_category : Sub_category?
 //	let item_type : Item_type?
@@ -344,7 +344,7 @@ class Product : Codable {
 //		case added_date_str = "added_date_str"
 //		case paid_status = "paid_status"
 //		case photo_count = "photo_count"
-//		case default_photo = "default_photo"
+		case default_photo = "default_photo"
 //		case category = "category"
 //		case sub_category = "sub_category"
 //		case item_type = "item_type"
@@ -406,7 +406,7 @@ class Product : Codable {
 //		added_date_str = try values.decodeIfPresent(String.self, forKey: .added_date_str)
 //		paid_status = try values.decodeIfPresent(String.self, forKey: .paid_status)
 //		photo_count = try values.decodeIfPresent(String.self, forKey: .photo_count)
-//		default_photo = try values.decodeIfPresent(Default_photo.self, forKey: .default_photo)
+		default_photo = try values.decodeIfPresent(Default_photo.self, forKey: .default_photo)
 //		category = try values.decodeIfPresent(Category.self, forKey: .category)
 //		sub_category = try values.decodeIfPresent(Sub_category.self, forKey: .sub_category)
 //		item_type = try values.decodeIfPresent(Item_type.self, forKey: .item_type)
@@ -428,7 +428,7 @@ class Product : Codable {
         title:String,
         weight:String,
         quantity:String,
-        urlImage:String,
+        default_photo:Default_photo,
         condition:Condition_of_item
     ) {
         self.id = id
@@ -436,7 +436,7 @@ class Product : Codable {
         self.title = title
         self.weight = weight
         self.quantity = quantity
-        self.urlImage = urlImage
+        self.default_photo = default_photo
         
         self.condition_of_item = condition
 //        self.added_user_name = nil
@@ -449,6 +449,7 @@ class Product : Codable {
     
     init() {
         self.condition_of_item = nil
+        self.default_photo = nil
     }
 }
 

@@ -6,172 +6,145 @@
 //
 
 import UIKit
-import Alamofire
+import RxSwift
 
 
 class ViewController: UIViewController {
     
+    var placeholderError : PlaceholderError?
+    
     @IBOutlet weak var productCollection: UICollectionView!
     
-    let btn = BadgedButtonItem(with: UIImage(named: "ic_cart"))
+    let viewModel : CatalogViewModel = CatalogViewModel()
     
-    var products : [Product] = []
+    let cartBtn = BadgedButtonItem(with: UIImage(named: "ic_cart"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        self.navigationController?.title = "Catalog"
-//        self.title = "Catalog"
         self.navigationController?.navigationBar.topItem?.title = "Catalog"
-//        navigationBar.topItem?.title = "Your Title"
+        self.navigationItem.rightBarButtonItem = cartBtn
 
-        self.navigationItem.rightBarButtonItem = btn
-
-        btn.tapAction = {
-            self.btn.setBadge(with: 0)
-            self.gogogo()
+        cartBtn.tapAction = {
+            self.gotoCart()
         }
         
-        // Do any additional setup after loading the view.
-        let url = "https://ranting.twisdev.com/index.php/rest/items/search/api_key/teampsisthebest/"
-        AF.request(url,method: .post)
-            .validate()
-            .response { response in
-                switch response.result {
-                case .success(let rawResponse):
-                    self.products = self.mapFreakJson(rawResponse)
-                    self.productCollection.reloadData()
-//                    self.mapFreakJson(rawResponse).map {
-//                        print($0.title)
-//                    }
-                    
-                case .failure(let error):
-                print(error)
+        productCollection.register(UINib(nibName: ProductCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ProductCollectionViewCell.identifier)
+        
+        productCollection.register(UINib(nibName: DummyCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DummyCollectionViewCell.identifier)
+        
+        productCollection.delegate = self
+        
+        _ = viewModel.displayedProduct
+            .observeOn(MainScheduler.instance)
+            .bind(to: productCollection.rx.items) { tableView,row,product -> UICollectionViewCell in
                 
+                if self.viewModel.displayedShimmerState.value == true {
+                    let indexPath = IndexPath.init(row: row, section: 0)
+                    guard let cell = tableView.dequeueReusableCell(
+                            withReuseIdentifier: DummyCollectionViewCell.identifier, for: indexPath) as? DummyCollectionViewCell
+                    else { return UICollectionViewCell()}
+                    cell.didLoading()
+                    return cell
+                }
+                else {
+                    let indexPath = IndexPath.init(row: row, section: 0)
+                    guard let cell = tableView.dequeueReusableCell(
+                            withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as? ProductCollectionViewCell
+                    else { return UICollectionViewCell()}
+                    cell.fill(product: product)
+                    return cell
                 }
                 
             }
+            //.disposed(by: listViewModel.disposeBag)
         
-        productCollection.register(UINib(nibName: ProductCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ProductCollectionViewCell.identifier)
-        productCollection.dataSource = self
-        productCollection.delegate = self
+        _ = viewModel.displayedisError.subscribe {  showError in
+                self.observeisError(error: showError)
+        }
         
+        _ = viewModel.displayedisInfo.subscribe {  warning in
+//            guard let info = warning else { return }
+            self.observeisInfo(string: warning)
+//            DispatchQueue.main.async {
+//                let alert = UIAlertController(title: "Info", message: warning.element ?? "", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//                self.present(alert, animated: true)
+//            }
+        }
+        
+        _ = viewModel.displayedCart.subscribe {  localProduct in
+            DispatchQueue.main.async {
+                let notif = localProduct.element?.count ?? 0
+                print(notif)
+                
+            self.cartBtn.setBadge(with: localProduct.element?.count ?? 0)
+            }
+        }
+        
+        productCollection
+                .rx
+                .modelSelected(Product.self)
+                .subscribe(onNext: { (model) in
+                    if self.viewModel.displayedShimmerState.value == true { return }
+                    self.viewModel.addProducttoCart(product: model)
+                })
     }
     
-    func gogogo(){
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchCartData()
+    }
+    
+    func gotoCart(){
         guard let vc = UIStoryboard(name: "Main", bundle: nil)
                 .instantiateViewController(withIdentifier: "CartViewController") as? CartViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func mapFreakJson(_ rawResponse:Any)-> [Product] {
-        let decoder = JSONDecoder()
-        let rawResponse = rawResponse as! Data
-        var outputProducts : [Product] = []
-        
-        do {
-            let products = try decoder.decode([Product].self, from: rawResponse)
-            outputProducts = products
+    func observeisInfo(string:String?){
+        if let value = string {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Info", message: value ?? "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
         }
-        catch(let message) {
-            print(message.localizedDescription)
+    }
+    
+    func observeisError(error:Error?){
+        if let error = error {
+            productCollection.isHidden = true
+            let alert = UIAlertController(title: "Oops error ", message: "\(error.localizedDescription)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
-        
-        return outputProducts
+        else {
+            productCollection.isHidden = false
+        }
     }
-    
-//    func mapFreakJson(_ rawResponse:Any)-> [Product] {
-//        let decoder = JSONDecoder()
-//        let rawResponse = rawResponse as! NSArray
-//        var outputProducts : [Product] = []
-//        rawResponse.map{
-//            let productRaw = $0
-//            do {
-//                let serializedProduct = try JSONSerialization.data(withJSONObject: productRaw, options: [])
-//                do{
-//                    let product = try decoder.decode(Product.self, from: serializedProduct)
-//                    outputProducts.append(product)
-//                }
-//                catch(let message) { print(message.localizedDescription) }
-//            }
-//            catch(let message) { print(message.localizedDescription) }
-//        }
-//        return outputProducts
-//    }
-    @objc func handleClick(_ sender: Any) {
-        
-    }
-    
-    
 }
 
-extension ViewController:UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if collectionView == genreCollection {
-        return //2
-        products.count
-//        } else if collectionView == ssCollection {
-//            return game?.ss?.count ?? 0
-//        }
-//        return 0
+extension ViewController:PlaceholderErrorDelegate {
+    func clicked(sender: Any) {
+        self.viewModel.getData()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        var cell = UICollectionViewCell()
-//        if collectionView == genreCollection {
-            let cell = collectionView
-                .dequeueReusableCell(withReuseIdentifier:ProductCollectionViewCell.identifier, for: indexPath)
-                as? ProductCollectionViewCell ?? UICollectionViewCell()
-//            genreCollectioncell?.txtGenre.text = game?.genres?[indexPath.item].name ?? ""
-            
-//            cell = genreCollectioncell ?? UICollectionViewCell()
-            return cell
-//        } else if collectionView == ssCollection {
-//            let ssCollectioncell = collectionView
-//                .dequeueReusableCell(withReuseIdentifier:"SSCollectionViewCell", for: indexPath)
-//                as? SSCollectionViewCell ?? nil
-//
-//            let ss = game?.ss?[indexPath.item]
-//
-//            ssCollectioncell?.ssImage.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
-//
-//            ssCollectioncell?.ssImage.sd_setImage(with: ss?.imageURL,completed: { (image,error,cacheType,url) in
-//
-//            })
-//
-//            return ssCollectioncell ?? UICollectionViewCell()
-//        }
-//        return UICollectionViewCell()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "PlaceholderErrorSegue") {
+            placeholderError = segue.destination as? PlaceholderError
+            placeholderError?.delegate = self
+        }
     }
-    
-    
+}
+
+class PlaceholderError : UIViewController {
+    var delegate :PlaceholderErrorDelegate?
+    @IBAction func buttonRefreshOnClicked(_ sender: Any) {
+        delegate?.clicked(sender: sender)
+    }
+}
+
+protocol PlaceholderErrorDelegate {
+    func clicked(sender:Any)
 }
 
 
 
-extension ViewController:UICollectionViewDelegateFlowLayout{
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = self.calculateWith()
-        return CGSize(width: width, height: width)
-    }
-
-    func calculateWith() -> CGFloat {
-//        let estimateWidth = 826.0
-//        let estimatedWidth = CGFloat(300);
-        
-        let estimatedWidth = CGFloat(150)
-        let cellMarginSize = 5.0
-        
-        let cellCount = floor( CGFloat ( self.view.frame.size.width / estimatedWidth ) )
-        let lrmargin = CGFloat(cellMarginSize * 2 )
-        //fullwidth layar - (margintanpakanankiri) - marginkanankirinya
-        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1 ) - lrmargin) / cellCount
-
-        return width
-    }
-
-}

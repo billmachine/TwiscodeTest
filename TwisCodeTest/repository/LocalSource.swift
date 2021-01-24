@@ -43,20 +43,25 @@ class LocalSource {
                 var members: [Product] = []
                 for result in results {
                     let condition = Condition_of_item(name:result.value(forKeyPath: "condition") as? String ?? "")
+                    let defaultPhoto = Default_photo(img_path:result.value(forKeyPath: "urlImage") as? String ?? "")
+                    
                     let member = Product(
                         id: result.value(forKeyPath: "id") as? String ?? "",
                         price: result.value(forKeyPath: "price") as? String ?? "",
                         title: result.value(forKeyPath: "title") as? String ?? "",
                         weight: result.value(forKeyPath: "weight") as? String ?? "",
                         quantity: result.value(forKeyPath: "quantity") as? String ?? "",
-                        urlImage: result.value(forKeyPath: "urlImage") as? String ?? "",
+                        default_photo: defaultPhoto,
                         condition: condition
                     )
                     
                     members.append(member)
                 }
                 completion(members)
-            } catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+                
+            }
         }
     }
     
@@ -67,21 +72,21 @@ class LocalSource {
         _ weight: String,
         _ quantity: String,
         _ urlImage: String,
-        _ condition: Condition_of_item,
+        _ condition: String,
         completion: @escaping() -> Void
     ) {
         let taskContext = newTaskContext()
         taskContext.performAndWait {
             if let entity = NSEntityDescription.entity(forEntityName: "Cart", in: taskContext) {
                 let member = NSManagedObject(entity: entity, insertInto: taskContext)
-
+                
                 member.setValue(id, forKeyPath: "id")
-                member.setValue(urlImage, forKeyPath: "image")
+                member.setValue(urlImage, forKeyPath: "urlImage")
                 member.setValue(price, forKeyPath: "price")
                 member.setValue(quantity, forKeyPath: "quantity")
                 member.setValue(title, forKeyPath: "title")
                 member.setValue(weight, forKeyPath: "weight")
-                member.setValue(condition.name, forKeyPath: "condition")
+                member.setValue(condition, forKeyPath: "condition")
 
                 do {
                     try taskContext.save()
@@ -117,23 +122,25 @@ class LocalSource {
         }
     }
 
-     func getById(_ id: Int, completion: @escaping(_ members: Product?) -> Void ) {
+     func getById(_ id: String, completion: @escaping(_ members: Product?) -> Void ) {
             let taskContext = newTaskContext()
             taskContext.perform {
                 var member : Product?
                 let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Cart")
                 fetchRequest.fetchLimit = 1
-                fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+                fetchRequest.predicate = NSPredicate(format: "id == '\(id ?? "")'")
                 do {
                     if let result = try taskContext.fetch(fetchRequest).first {
                         let condition = Condition_of_item(name:result.value(forKeyPath: "condition") as? String ?? "")
+                        let defaultPhoto = Default_photo(img_path:result.value(forKeyPath: "urlImage") as? String ?? "")
+                        
                          member = Product(
                             id: result.value(forKeyPath: "id") as? String ?? "",
                             price: result.value(forKeyPath: "price") as? String ?? "",
                             title: result.value(forKeyPath: "title") as? String ?? "",
                             weight: result.value(forKeyPath: "weight") as? String ?? "",
                             quantity: result.value(forKeyPath: "quantity") as? String ?? "",
-                            urlImage: result.value(forKeyPath: "urlImage") as? String ?? "",
+                            default_photo: defaultPhoto,
                             condition: condition
                         )
                     }
@@ -143,5 +150,36 @@ class LocalSource {
                 }
             }
         }
+    
+    func update(_ product: Product, completion: @escaping(_ finish: Void?) -> Void ) {
+        let taskContext = newTaskContext()
+        taskContext.perform {
+            var member : Product?
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Cart")
+            fetchRequest.fetchLimit = 1
+            fetchRequest.predicate = NSPredicate(format: "id == '\(product.id ?? "")'")
+//            fetchRequest.predicate = NSPredicate(format: "id == 'itm_8b038ac2b6cef0deb5ecc14bb590b3fe'")
+            do {
+                let result = try taskContext.fetch(fetchRequest) as? [NSManagedObject]
+                if result?.count != 0{
+                    var managedObject = result?[0]
+//                    print(managedObject?.value(forKey: "id"))
+                    managedObject?.setValue(product.id, forKey: "id")
+                    managedObject?.setValue(product.title, forKey: "title")
+                    managedObject?.setValue(product.weight, forKey: "weight")
+                    managedObject?.setValue(product.price, forKey: "price")
+                    managedObject?.setValue(product.quantity, forKey: "quantity")
+                    managedObject?.setValue(product.default_photo?.img_path, forKey: "urlImage")
+                    managedObject?.setValue(product.condition_of_item?.name, forKey: "condition")
+                    
+                    try taskContext.save()
+                }
+                completion({}())
+
+               } catch let error as NSError {
+                   print("Could not fetch. \(error), \(error.userInfo)")
+               }
+           }
+       }
 
 }

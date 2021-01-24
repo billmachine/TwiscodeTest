@@ -42,5 +42,15 @@ struct Default_photo : Codable {
 		img_height = try values.decodeIfPresent(String.self, forKey: .img_height)
 		img_desc = try values.decodeIfPresent(String.self, forKey: .img_desc)
 	}
+    
+    init(img_path:String?) {
+        self.img_path = img_path
+        self.img_id = nil
+        self.img_parent_id = nil
+        self.img_type = nil
+        self.img_width = nil
+        self.img_height = nil
+        self.img_desc = nil
+    }
 
 }

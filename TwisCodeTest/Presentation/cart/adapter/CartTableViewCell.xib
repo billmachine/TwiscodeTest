@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyc-a8-U57">
-                        <rect key="frame" x="5" y="5" width="100" height="100"/>
+                        <rect key="frame" x="5" y="25" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="F4i-Wg-6pB"/>
-                            <constraint firstAttribute="width" constant="100" id="djF-1e-3Tf"/>
+                            <constraint firstAttribute="height" constant="80" id="F4i-Wg-6pB"/>
+                            <constraint firstAttribute="width" constant="80" id="djF-1e-3Tf"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -29,11 +30,11 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="SgF-96-x3Y">
-                        <rect key="frame" x="110" y="10" width="232" height="88"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SgF-96-x3Y">
+                        <rect key="frame" x="95" y="10" width="247" height="110"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-nq-LEM">
-                                <rect key="frame" x="0.0" y="0.0" width="116" height="59.5"/>
+                                <rect key="frame" x="0.0" y="25.5" width="123.5" height="59.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO9-Cs-GgV">
                                         <rect key="frame" x="0.0" y="0.0" width="36.5" height="20.5"/>
@@ -56,18 +57,18 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LPy-n8-iSV">
-                                <rect key="frame" x="116" y="0.0" width="116" height="88"/>
+                                <rect key="frame" x="123.5" y="11" width="123.5" height="88"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgh-Tn-QXc">
-                                        <rect key="frame" x="39.5" y="0.0" width="37" height="34"/>
+                                        <rect key="frame" x="43.5" y="0.0" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sxd-Zl-1Ge">
-                                        <rect key="frame" x="11" y="39" width="94" height="32"/>
+                                        <rect key="frame" x="15" y="39" width="94" height="32"/>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg9-1L-PEr">
-                                        <rect key="frame" x="48" y="76" width="20.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="76" width="20.5" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -78,16 +79,23 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Lyc-a8-U57" secondAttribute="bottom" constant="5" id="2XB-tO-IBz"/>
                     <constraint firstItem="Lyc-a8-U57" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="4ea-K7-gR3"/>
+                    <constraint firstItem="Lyc-a8-U57" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7RE-TG-oAO"/>
                     <constraint firstAttribute="trailing" secondItem="SgF-96-x3Y" secondAttribute="trailing" id="CU3-E0-2zE"/>
                     <constraint firstItem="SgF-96-x3Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JUD-tV-JQg"/>
-                    <constraint firstItem="SgF-96-x3Y" firstAttribute="leading" secondItem="Lyc-a8-U57" secondAttribute="trailing" constant="5" id="fKW-5l-DlL"/>
+                    <constraint firstItem="SgF-96-x3Y" firstAttribute="leading" secondItem="Lyc-a8-U57" secondAttribute="trailing" constant="10" id="fKW-5l-DlL"/>
                     <constraint firstAttribute="bottom" secondItem="SgF-96-x3Y" secondAttribute="bottom" constant="10" id="iZx-ox-kkK"/>
-                    <constraint firstItem="Lyc-a8-U57" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="pcX-Tr-6o9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="etQuantity" destination="tgh-Tn-QXc" id="guQ-5p-zcL"/>
+                <outlet property="imgCart" destination="Lyc-a8-U57" id="cQk-7i-Lki"/>
+                <outlet property="txtCondition" destination="Boi-6L-1YO" id="CbO-nv-0XR"/>
+                <outlet property="txtPrice" destination="UEL-lH-gyi" id="4vs-L5-nzf"/>
+                <outlet property="txtTitle" destination="jO9-Cs-GgV" id="hyT-Id-GS8"/>
+                <outlet property="txtWeight" destination="eg9-1L-PEr" id="Okk-m7-i5E"/>
+            </connections>
             <point key="canvasLocation" x="-23" y="-17"/>
         </tableViewCell>
     </objects>
