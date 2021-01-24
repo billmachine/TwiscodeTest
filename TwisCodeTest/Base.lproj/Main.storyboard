@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -118,6 +117,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4lA-Ks-e1w">
+                                <rect key="frame" x="103" y="355.5" width="208" height="185.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty" translatesAutoresizingMaskIntoConstraints="NO" id="CEK-jS-gMc">
+                                        <rect key="frame" x="54" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Bib-BI-sr6"/>
+                                            <constraint firstAttribute="width" constant="100" id="um7-rh-O8V"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Kosong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHS-PE-lfm">
+                                        <rect key="frame" x="52.5" y="112" width="103.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kembali ke Halaman Utama Untuk Memilih Produk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYc-fw-QJp">
+                                        <rect key="frame" x="0.0" y="144.5" width="208" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="39e-Lq-a1X">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -125,47 +148,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVG-55-0TO" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="JB5-kY-x8T">
-                                        <rect key="frame" x="60.5" y="27.5" width="293.5" height="45.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Rm-27-JHb">
+                                        <rect key="frame" x="30" y="27.5" width="93.5" height="45.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Rm-27-JHb">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="45.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Harga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2I-6t-J19">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="20.5"/>
-                                                        <color key="tintColor" systemColor="systemPinkColor"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 20.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N0-BW-88s">
-                                                        <rect key="frame" x="10.5" y="28.5" width="72" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                        <color key="textColor" systemColor="systemYellowColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-6f-Fah" customClass="MDCButton">
-                                                <rect key="frame" x="213.5" y="0.0" width="80" height="45.5"/>
-                                                <color key="backgroundColor" name="AccentColor"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                                                <state key="normal" title="Order"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Harga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2I-6t-J19">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="20.5"/>
+                                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N0-BW-88s">
+                                                <rect key="frame" x="20" y="28.5" width="54" height="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemYellowColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-6f-Fah" customClass="MDCButton">
+                                        <rect key="frame" x="294" y="30" width="80" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="6tV-Sd-8fS"/>
+                                            <constraint firstAttribute="height" constant="40" id="qT5-Nq-THj"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Order"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="JB5-kY-x8T" firstAttribute="centerY" secondItem="HVG-55-0TO" secondAttribute="centerY" id="9Sf-18-ncg"/>
                                     <constraint firstAttribute="height" constant="100" id="9hq-4n-Kam"/>
-                                    <constraint firstItem="JB5-kY-x8T" firstAttribute="centerX" secondItem="HVG-55-0TO" secondAttribute="centerX" id="eTf-bv-QZv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ktx-6f-Fah" secondAttribute="trailing" constant="40" id="Klm-yc-XsY"/>
+                                    <constraint firstItem="5Rm-27-JHb" firstAttribute="centerY" secondItem="HVG-55-0TO" secondAttribute="centerY" id="M3G-vy-uwF"/>
+                                    <constraint firstItem="5Rm-27-JHb" firstAttribute="leading" secondItem="HVG-55-0TO" secondAttribute="leading" constant="30" id="iOl-Uy-8Rk"/>
+                                    <constraint firstItem="Ktx-6f-Fah" firstAttribute="centerY" secondItem="HVG-55-0TO" secondAttribute="centerY" id="wKE-P7-faY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -175,10 +198,12 @@
                             <constraint firstItem="q3Z-yg-Lbz" firstAttribute="trailing" secondItem="39e-Lq-a1X" secondAttribute="trailing" id="08n-Xi-hgT"/>
                             <constraint firstItem="q3Z-yg-Lbz" firstAttribute="bottom" secondItem="HVG-55-0TO" secondAttribute="bottom" id="J7Z-pu-b8V"/>
                             <constraint firstAttribute="bottomMargin" secondItem="39e-Lq-a1X" secondAttribute="bottom" id="P58-62-vM3"/>
+                            <constraint firstItem="4lA-Ks-e1w" firstAttribute="centerY" secondItem="1or-g3-e1K" secondAttribute="centerY" id="d7q-KV-ocE"/>
                             <constraint firstItem="q3Z-yg-Lbz" firstAttribute="trailing" secondItem="HVG-55-0TO" secondAttribute="trailing" id="j02-gi-h2S"/>
                             <constraint firstItem="39e-Lq-a1X" firstAttribute="top" secondItem="q3Z-yg-Lbz" secondAttribute="top" id="lZG-GB-8uR"/>
                             <constraint firstItem="39e-Lq-a1X" firstAttribute="leading" secondItem="q3Z-yg-Lbz" secondAttribute="leading" id="uVG-KC-5xu"/>
                             <constraint firstItem="HVG-55-0TO" firstAttribute="leading" secondItem="q3Z-yg-Lbz" secondAttribute="leading" id="v3g-JT-cwo"/>
+                            <constraint firstItem="4lA-Ks-e1w" firstAttribute="centerX" secondItem="1or-g3-e1K" secondAttribute="centerX" id="vie-T1-OX8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -270,9 +295,6 @@
         <image name="ic_empty" width="225" height="225"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

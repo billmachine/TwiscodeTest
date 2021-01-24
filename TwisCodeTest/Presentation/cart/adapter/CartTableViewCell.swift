@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+
 class CartTableViewCell: UITableViewCell {
     static let identifier = String(describing: CartTableViewCell.self)
     
@@ -17,13 +18,36 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var txtCondition: UILabel!
     @IBOutlet weak var etQuantity: UITextField!
     @IBOutlet weak var txtWeight: UILabel!
-   
-    var btnQuantityUp:(()-> Void)?
-    var btnQuantityDown:(()-> Void)?
+    @IBOutlet weak var quantityStepper: UIStepper!
+    
+    var btnQuantityDown: (() -> ())?
+    var btnQuantityUp: (() -> ())?
+    var onchangeQuantity: ((String) -> ())?
+    
+    @IBAction func quantityStepperAction(_ sender: UIStepper) {
+        if(sender.value == 0.0){
+            btnQuantityDown?()
+        } else {
+            btnQuantityUp?()
+        }
+        quantityStepper.value = 0.5
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        quantityStepper.maximumValue = 1.0
+        quantityStepper.minimumValue = 0.0
+        quantityStepper.value = 0.5
+        etQuantity.delegate = self
+        etQuantity.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+
+    }
+    
+    @objc func textFieldDidChange(textField: UITextField) {
+//        print(textField.text)
+        self.onchangeQuantity!(textField.text ?? "")
     }
     
     func fill(product:Product){
@@ -68,4 +92,22 @@ class CartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension CartTableViewCell : UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        print(textField.tag)
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        if allowedCharacters.isSuperset(of: characterSet) == false { return false }
+        
+        guard let text = textField.text else { return true }
+        let newLength = text.count + string.count - range.length
+        
+//        if newLength <= 3 { self.self.onchangeQuantity!(textField.text ?? "") }
+        return newLength <= 3
+//
+
+    }
 }

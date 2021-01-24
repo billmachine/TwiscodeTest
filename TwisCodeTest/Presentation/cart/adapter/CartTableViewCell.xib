@@ -66,6 +66,9 @@
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sxd-Zl-1Ge">
                                         <rect key="frame" x="15" y="39" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="quantityStepperAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="avp-Pn-e1K"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg9-1L-PEr">
                                         <rect key="frame" x="51.5" y="76" width="20.5" height="12"/>
@@ -91,6 +94,7 @@
             <connections>
                 <outlet property="etQuantity" destination="tgh-Tn-QXc" id="guQ-5p-zcL"/>
                 <outlet property="imgCart" destination="Lyc-a8-U57" id="cQk-7i-Lki"/>
+                <outlet property="quantityStepper" destination="sxd-Zl-1Ge" id="J6E-2m-pFB"/>
                 <outlet property="txtCondition" destination="Boi-6L-1YO" id="CbO-nv-0XR"/>
                 <outlet property="txtPrice" destination="UEL-lH-gyi" id="4vs-L5-nzf"/>
                 <outlet property="txtTitle" destination="jO9-Cs-GgV" id="hyT-Id-GS8"/>

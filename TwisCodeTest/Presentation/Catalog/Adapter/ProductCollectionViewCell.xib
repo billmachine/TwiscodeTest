@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="TwisCodeTest" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="TwisCodeTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -20,7 +21,7 @@
                     <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvt-be-WkU" userLabel="CardView" customClass="MDCCard">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder2" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLH-hY-HE5">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder2" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLH-hY-HE5">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="EN6-ch-VtK"/>
@@ -28,19 +29,25 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
-                            <label opaque="NO" alpha="0.85000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Es Gledek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-cU-Yhe">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.85000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Es Gledek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-cU-Yhe">
                                 <rect key="frame" x="5" y="105" width="125" height="12"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 250.000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVt-Wh-oeD">
                                 <rect key="frame" x="5" y="119" width="145" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-qY-9BH" userLabel="Kota">
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-qY-9BH" userLabel="Kota">
                                 <rect key="frame" x="5" y="131" width="105" height="15"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="P5H-j3-bPS">
@@ -55,10 +62,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-s7-hav" userLabel="User">
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="1lT-s7-hav" userLabel="User">
                                 <rect key="frame" x="5" y="151" width="105" height="10"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user" translatesAutoresizingMaskIntoConstraints="NO" id="ImD-aW-pTE">
@@ -73,6 +83,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                             </stackView>
@@ -100,27 +113,27 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZNn-qY-9BH" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="1ZP-Rm-NNq"/>
-                            <constraint firstAttribute="bottom" secondItem="LNl-ei-oZD" secondAttribute="bottom" constant="5" id="2Uk-RO-c0Q"/>
-                            <constraint firstAttribute="trailing" secondItem="LNl-ei-oZD" secondAttribute="trailing" constant="5" id="2re-6N-N7n"/>
-                            <constraint firstItem="SLH-hY-HE5" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" id="4PM-ip-gM1"/>
-                            <constraint firstItem="SLH-hY-HE5" firstAttribute="top" secondItem="wvt-be-WkU" secondAttribute="top" id="4dT-kR-a91"/>
-                            <constraint firstItem="wYL-4O-huh" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="5fo-Ip-gbK"/>
+                            <constraint firstAttribute="bottom" secondItem="LNl-ei-oZD" secondAttribute="bottom" constant="5" id="0dr-Ia-vtc"/>
+                            <constraint firstItem="LVt-Wh-oeD" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="4rC-8p-Vcu"/>
                             <constraint firstItem="wYL-4O-huh" firstAttribute="top" secondItem="1lT-s7-hav" secondAttribute="bottom" constant="10" id="5wh-ca-GQW"/>
+                            <constraint firstAttribute="height" constant="200" id="8Hg-xa-OnB"/>
                             <constraint firstItem="LNl-ei-oZD" firstAttribute="leading" secondItem="1lT-s7-hav" secondAttribute="trailing" constant="5" id="ADg-IR-EFx"/>
                             <constraint firstItem="LNl-ei-oZD" firstAttribute="leading" secondItem="ZNn-qY-9BH" secondAttribute="trailing" constant="5" id="D2L-vN-84A"/>
-                            <constraint firstAttribute="trailing" secondItem="LVt-Wh-oeD" secondAttribute="trailing" id="FaY-CU-0sI"/>
+                            <constraint firstItem="SLH-hY-HE5" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" id="IX0-6J-lvy"/>
+                            <constraint firstAttribute="trailing" secondItem="SLH-hY-HE5" secondAttribute="trailing" id="IoH-Cb-25O"/>
                             <constraint firstItem="1lT-s7-hav" firstAttribute="top" secondItem="ZNn-qY-9BH" secondAttribute="bottom" constant="5" id="KQw-D4-tpl"/>
-                            <constraint firstAttribute="height" constant="200" id="N2s-PA-A5G"/>
+                            <constraint firstAttribute="trailing" secondItem="LVt-Wh-oeD" secondAttribute="trailing" id="NAj-Pq-W8s"/>
+                            <constraint firstItem="SLH-hY-HE5" firstAttribute="top" secondItem="wvt-be-WkU" secondAttribute="top" id="PbK-OH-aR8"/>
+                            <constraint firstAttribute="trailing" secondItem="LNl-ei-oZD" secondAttribute="trailing" constant="5" id="Pku-db-fum"/>
                             <constraint firstItem="LVt-Wh-oeD" firstAttribute="top" secondItem="Tgv-cU-Yhe" secondAttribute="bottom" constant="2" id="PsJ-ak-kNS"/>
+                            <constraint firstItem="wYL-4O-huh" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="Vzo-3v-sEr"/>
                             <constraint firstItem="Tgv-cU-Yhe" firstAttribute="top" secondItem="SLH-hY-HE5" secondAttribute="bottom" constant="5" id="b1B-cR-KEa"/>
-                            <constraint firstAttribute="trailing" secondItem="Tgv-cU-Yhe" secondAttribute="trailing" constant="20" id="e3M-u2-JHg"/>
-                            <constraint firstItem="Tgv-cU-Yhe" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="h65-UO-J7s"/>
+                            <constraint firstAttribute="trailing" secondItem="Tgv-cU-Yhe" secondAttribute="trailing" constant="20" symbolic="YES" id="d5m-fq-vss"/>
+                            <constraint firstItem="1lT-s7-hav" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="dvm-7w-12R"/>
+                            <constraint firstAttribute="width" constant="150" id="gq1-Lp-Rf6"/>
                             <constraint firstItem="ZNn-qY-9BH" firstAttribute="top" secondItem="LVt-Wh-oeD" secondAttribute="bottom" constant="2" id="hP9-dP-Oda"/>
-                            <constraint firstItem="LVt-Wh-oeD" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="lex-wk-WOO"/>
-                            <constraint firstAttribute="trailing" secondItem="SLH-hY-HE5" secondAttribute="trailing" id="n7i-wx-6B4"/>
-                            <constraint firstItem="1lT-s7-hav" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="nDc-Vl-opw"/>
-                            <constraint firstAttribute="width" constant="150" id="q1G-Oz-ald"/>
+                            <constraint firstItem="ZNn-qY-9BH" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="jrL-Y5-btd"/>
+                            <constraint firstItem="Tgv-cU-Yhe" firstAttribute="leading" secondItem="wvt-be-WkU" secondAttribute="leading" constant="5" id="oL5-KD-Xo5"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -132,11 +145,23 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="wvt-be-WkU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3Xf-8j-YpP"/>
-                <constraint firstAttribute="bottom" secondItem="wvt-be-WkU" secondAttribute="bottom" id="d3W-sM-8qn"/>
-                <constraint firstItem="wvt-be-WkU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fXB-i8-nIY"/>
-                <constraint firstAttribute="trailing" secondItem="wvt-be-WkU" secondAttribute="trailing" id="feX-Pq-Wu2"/>
+                <constraint firstItem="wvt-be-WkU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5AU-dw-nOb"/>
+                <constraint firstItem="wvt-be-WkU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="REe-nK-oml"/>
+                <constraint firstAttribute="bottom" secondItem="wvt-be-WkU" secondAttribute="bottom" id="kzz-Oz-5Sm"/>
+                <constraint firstAttribute="trailing" secondItem="wvt-be-WkU" secondAttribute="trailing" id="v3w-tL-pWo"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imgProduct" destination="SLH-hY-HE5" id="1Oi-7D-iX6"/>
+                <outlet property="isAvailable" destination="wYL-4O-huh" id="Mkd-M9-j6H"/>
+                <outlet property="isHalal" destination="LNl-ei-oZD" id="eJc-WY-NEo"/>
+                <outlet property="labelLocation" destination="HTD-mh-k83" id="QIz-ID-8Rm"/>
+                <outlet property="labelPrice" destination="LVt-Wh-oeD" id="mHJ-mY-45b"/>
+                <outlet property="labelTitle" destination="Tgv-cU-Yhe" id="7QM-kK-ANA"/>
+                <outlet property="labelUser" destination="Tef-cw-XXL" id="Nim-9c-wlK"/>
+            </connections>
             <point key="canvasLocation" x="134.78260869565219" y="55.580357142857139"/>
         </collectionViewCell>
     </objects>
